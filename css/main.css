@@ -1,0 +1,501 @@
+/* body 
+---------------------------------------------------------------------- */
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #ffffff;
+	font: 16px/30px 'Segoe UI';
+	font-weight: normal;
+	color: #3A3E4D;
+}
+
+/* typography
+--------------------------------------------------------------------- */
+h1,
+h4,
+h5 {
+	font-family: 'Segoe UI';
+	color: #FFFFFF;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin: 18px 0 15px;
+	
+}
+h2,
+h3,
+h6 {
+	font-family: 'Segoe UI';
+	color: black;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	margin: 18px 0 15px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	font-weight: inherit;
+}
+
+h1 {
+	font-size: 55px;
+	line-height: 40px;
+	margin-top: 30px;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 30px;
+	margin-bottom: 70px;
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+h4 {
+	font-size: 47px;
+	line-height: 30px;
+	font: bold;
+	margin-bottom: 40px;
+}
+
+h5 {
+	font-size: 34px;
+	line-height: 30px;
+	margin-top: 15px;
+	letter-spacing: 1px;
+}
+
+h6 {
+	font-size: 13px;
+	line-height: 30px;
+	margin-top: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+p {
+	margin: 15px 0 15px 0;
+}
+
+span {
+	color: #00ff08;  
+}
+/* Lists  
+--------------------------------------------------------------------- */
+ul,
+ol {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+ul {
+	list-style: disc;
+	margin-left: 17px;
+}
+
+/* header styles
+/* =================================================================== */
+
+header {
+	background-color: #3A3E4D;
+	height: fit-content	;
+	width: 100%;
+	position: fixed;
+	z-index: 600;
+}	
+
+header ul#nav li img {
+	width: 18px;
+	height: 18px;
+}
+
+header span {
+	color: #00ff08;
+}
+
+header .logo a {
+	display: block;
+	color: transparent;
+	width: 60px;
+	height: 60px;
+	bottom: 10px;
+	background: url("../images/footlogo.png") no-repeat center;
+	background-size: 50px 50px;
+}
+/* hero section
+/* =================================================================== */
+
+#hero {
+	background: url(../images/hero_bg.png) no-repeat center;
+	background-size: cover;
+	height: 600px;
+	width: 100%;
+	text-align: left;
+	position: relative;
+	padding-top: 6%;
+}
+
+#hiro{
+	padding-top: 12%;
+}
+
+/* navigation
+--------------------------------------------------------------------- */
+#nav-wrap {
+	font: 15px 'Segoe UI';
+	width: 100%; 
+}
+
+ul#nav {
+	text-align: right;
+	padding-right: 5%;	
+}
+
+ul#nav li {
+	position: relative;
+	display: inline-block;
+	height: 30px;  
+}
+
+ul#nav li a {
+	display: block;
+	padding: 0px 12px;
+	line-height: 22px;
+	text-align: left;
+	color: #FFFFFF;
+	position: relative;
+}
+
+ul#nav li a img{
+	padding-top: 1%;
+
+}
+
+ul#nav li a:hover {
+	color: #ffce48;
+}
+
+/* start */
+#hero #start {
+	position: relative;
+	bottom: 0px;
+	margin-top: 40px;
+}
+
+#hero #start a {
+	font: 22px/54px 'Segoe UI';
+	text-align: center;
+	display: block;
+	height: 54px;
+	width: 270px;
+	margin-top: 0px;
+	border-radius: 30px;
+	background: #69AC78;
+	color: #FFFFFF;
+}
+
+#hero #start a:hover {
+	background: #29af61;
+	color: #000000;
+}
+
+#bg1 {
+	position: relative;
+	width: 700px;
+	height: 525px;
+	top: -400px;
+	left: 470px;
+	margin-left: 50px;
+}
+
+/* about
+/* =================================================================== */
+
+#about {
+	background: #ffffff url;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+	height: 648px;
+}
+
+#about p {
+	font: 24px 'Segoe UI';
+	color: black;
+	margin-bottom: 26px;
+}
+
+#bg2{
+	position: relative;
+	width: 500px;
+	height: 400px;
+	top: 30px;
+	left: 80px;
+}
+
+#bg3{
+	position: relative;
+	width: 330px;
+	height: 330px;
+	bottom: 550px;
+	left: 1000px;
+}
+
+/* methotology
+/* =================================================================== */
+
+#methotology {
+	background: #264596;
+	padding-top: 50px;
+	padding-bottom: 0px;
+	text-align: center;
+	height: 740px;
+}
+#methotology h5{
+	text-align: left;
+	margin-bottom: 25px;
+}
+
+#methotology p {
+	font: 30px 'Segoe UI';
+	color: white;
+	margin-bottom: 50px;
+	text-align: center;
+}
+#methotology ol { 
+	font: 35px 'Segoe UI';
+	color: white;
+	letter-spacing: 1px;
+	text-align: left;
+}
+#methotology ol li{ 
+	margin-bottom: 16px;
+}
+
+#bg4{
+	position: relative;
+	width: 400px;
+	height: 500px;
+	bottom: 38px;
+	left: 100px;
+}
+
+#bg5{
+	position: relative;
+	width: 330px;
+	height: 400px;
+	bottom: 930px;
+	left: -550px;
+}
+
+/* feedback
+/* =================================================================== */
+
+#feedback {
+	background: #F2F5FC;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+	height: 940px;
+}
+
+#feedback p {
+	font: 18px 'Segoe UI';
+}
+
+#feedback #feeds {
+	text-align: center;
+	display: block;
+	height: fit-content;
+	width: 300px;
+	margin-top: 0px;
+	border-radius: 30px;
+	background: #FFFFFF;
+	padding: 20% 5% 5%;
+	box-shadow: 3px 6px #C9C9C9;
+}
+
+#feedback #man1 {
+	position: relative;
+	top: 50%;
+	left: 35%;
+}
+
+#feedback .column {
+	position: relative;
+	bottom: 80px;
+}
+
+#bg7{
+	position: relative;
+	width: 33%;
+	height: 20%;
+	bottom: 130px;
+	left: 990px;
+}
+
+/* services
+/* =================================================================== */
+
+#services {
+	background: #5100ff;
+	padding-top: 120px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+#services p {
+	font: 16px 'Segoe UI';
+	color: rgb(255, 255, 255);
+	margin-bottom: 26px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#services h5 {
+	text-align: center;
+	font: 26px 'Segoe UI';
+	font: bold;
+}
+
+#services img {
+	width: 280px;
+	height: 300px;
+	margin-left: 45px;
+}
+
+/* contact
+/* =================================================================== */
+
+#contact {
+	background: #ffffff;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+	height: 370px;
+}
+
+#contact p {
+	font: 24px 'Segoe UI';
+	color: black;
+	margin-bottom: 26px;
+}
+
+/* contact form */
+#contact form {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="Email"],
+input[type="text"]{
+	font: 25px 'Segoe UI';
+	margin-bottom: 45px;
+	margin-right: 25px;
+	width: 22%;
+	height: 50px;
+}
+
+#contact button {
+	font: 25px 'Segoe UI';
+	letter-spacing: 0px;
+	padding: 0px 30px;
+	height: 50px;
+	width: fit-content;
+	border-radius: 30px;
+	border: 0px;
+	background: #4ead00;
+	color: #ffce48;
+}
+
+#contact button:hover {
+	background: #69AC78;
+	color: #ffffff;
+}
+
+/** 
+/* footer
+/* =================================================================== */
+
+#FAQ{
+	background: #e8e7ff;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+/** 
+/* footer
+/* =================================================================== */
+footer {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	position: relative;
+	background-color: #3A3E4D;
+}
+
+footer p{
+	color:#ffffff;
+	font-size: 15px 'Segoe UI';
+	margin-left: 7px;
+}
+
+footer hr{
+	background-color:#C9C9C9;
+	color:#C9C9C9;
+	height: 0.1px;
+}
+
+footer #str {
+	width: 15px;
+	height: 15px;
+}
+
+footer a{
+	color: #FFE7C4;
+}
+
+footer a img{
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 18px;
+	width: 25px;
+	height: 25px;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #ffce48;
+}
+
+footer .footer-logo {
+	width: 50px;
+	height: 50px;
+	background: url() no-repeat center;
+	background-size: 50px 50px;
+	margin: 0 auto 21px;
+	display: block;
+	filter: alpha(opacity=10);
+}
+
+footer ul {
+	list-style: disc;
+	margin-left: 0px;
+}
+
+#bg{
+	top: 50px;
+	width: 210px;
+	height: 210px;
+}
