@@ -1,32 +1,36 @@
 h1 {
-	font-size: 30px;
-	padding-right: 20px;
-
-	letter-spacing: -1px;
+	font-size: 1.875vw;
+	padding-right: 1.25vw;
+	letter-spacing: -0.0625vw;
 	text-align: center;
 	color: #718CFF;
 }
 
 h2 {
-	font-size: 25px;
-	padding-right: 20px;
-	line-height: 5px;
-	letter-spacing: -1px;
+	font-size: 1.5625vw;
+	padding-right: 1.25vw;
+	line-height: 0.3125vw;
+	letter-spacing: -0.0625vw;
 	color: #718CFF;
 }
 
+a {
+	font-size: 1.1vw;
+	margin: 0;
+}
 
 p {
-    margin: 10px 0;
+    margin: 0.625vw 0;
 	color:#718CFF;
 	text-align: end;
+	font-size: 1.1vw;
 }
 
 body {
-	height: 100hv;
+	height: 35vw;
 	background: url(../Elements/Back_page-0001.jpg) no-repeat center;
 	background-size: cover;
-	padding-top: 13%;
+	padding-top: 11vw;
 	position: relative;
     display: flex;
     align-items: center;
@@ -40,6 +44,10 @@ a {
     text-decoration: none;
 }
 
+.forgot {
+	margin-bottom: 0.5vw;
+}
+
 a:hover,
 a:focus {
 	color: #AF77F6;
@@ -48,13 +56,13 @@ a:focus {
 form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 25vw;
 }
 
 input {
-    margin: 10px 0;
-    padding: 10px;
-	border-radius: 5px;
+    margin: 0.625vw 0;
+    padding: 0.625vw;
+	border-radius: 0.3125vw;
 }
 
 input[type="text"],
@@ -63,24 +71,25 @@ input[type="email"],
 textarea,
 select {
 	display: block;
-	padding: 18px 20px;
-	margin: 10px 0 12px 0;
-	border-color: #718CFF;
+	padding: 1.125vw 1.25vw;
+	margin: 0.625vw 0 0.75vw 0;
+	border: 0.11vw solid #718CFF;
 	outline: none;
 	color: #000000;
 	font-family: "raleway-bold", sans-serif;
-	font-size: 15px;
-	line-height: 24px;
-	border-radius: 3px;
+	font-size: 0.9375vw;
+	line-height: 1.5vw;
+	border-radius: 0.1875vw;
 	max-width: 100%;
 }
 
 button {
-    padding: 10px;
+    padding: 0.625vw;
+	font-size: 1.1vw;
     border: unset;
     cursor: pointer;
 	background: #718CFF;
-	border-radius: 5px;
+	border-radius: 0.3125vw;
 }
 
 .button:hover,

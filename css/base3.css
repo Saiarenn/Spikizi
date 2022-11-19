@@ -1,5 +1,5 @@
 html {
-	font-family: 'Segoe UI';
+	font-family: 'Roboto';
 }
 
 body {
@@ -16,29 +16,8 @@ a {
 	background: transparent;
 }
 
-a:active,
-a:hover {
-	outline: 0;
-}
-
-b,
-strong {
-	font-weight: bold;
-}
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
 img {
 	border: 0;
-}
-
-hr {
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	height: 0;
 }
 
 button,
@@ -97,7 +76,6 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-
 /*
 /* Typography 
 ====================================================================== */
@@ -135,7 +113,7 @@ h6 {
 ---------------------------------------------------------------------- */
 a {
 	text-decoration: none;
-	line-height: 1vw;
+	line-height: inherit;
 }
 
 a img {
@@ -150,20 +128,16 @@ p a,
 p a:visited {
 	line-height: inherit;
 }
-
-.rightbutton{
-	padding: 0 0px 6px 4px;
-}
-
-.leftbutton{
-	padding: 0 4px 6px 0px;
-}
-
 /* 
 /* Grid
 ===================================================================== */
-.row {
+.fullscreen{
 	width: 75%;
+	margin: 0 auto;
+}
+
+.row {
+	width: 87.5%;
 	margin: 0 12.5%;
 }
 
@@ -180,7 +154,7 @@ p a:visited {
 nav{
 	display: flex;
 	flex-direction: row;
-	justify-content: end;
+	justify-content: center;
 	padding-right: 5%;
 }
 
@@ -188,38 +162,63 @@ nav{
 	display: flex;
 	flex-direction: column;
 }
-/* Statistic
-/* ================================================== */
-.stat {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 0.5556vw 2.77778vw;
+
+/*checks
+==================================================================*/
+#check1:checked~.data1 {
+	display: block;
 }
 
-.stat .container {
-	margin-right: 0.5556vw;
+#check2:checked~.data2 {
+	display: block;
 }
 
-.icons {
-	height: 4.4vw;
-	width: 4.4vw;
-    border-radius: 50%;
+#check3:checked~.data3 {
+	display: block;
 }
 
-.heroscreen{
-	width: 84%;
-	margin: 0 auto;
+#check4:checked~.data4 {
+	display: block;
 }
-/* feedback
-/* =================================================================== */
-.feedgrid {
-	padding: 2.22222vw 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 84%;
-	margin: 0 auto;
+
+#check5:checked~.data5 {
+	display: block;
 }
-/* footer
-/* =================================================================== */
+
+#check6:checked~.data6 {
+	display: block;
+}
+
+#check0:checked~.data0 {
+	display: block;
+}
+
+#check0:checked~ label {
+	visibility: hidden;
+}
+
+#check0:checked~ label::after {
+	content: 'Show Less';
+	display: block;
+	visibility: visible;
+}
+
+#check5:checked~ label {
+	visibility: hidden;
+}
+
+#check5:checked~ label::after {
+	content: 'Show Less';
+	display: block;
+	visibility: visible;
+}
+
+#check6:checked~ label {
+	visibility: hidden;
+}
+
+#check6:checked~ label::after {
+	content: 'Show Less';
+	display: block;
+	visibility: visible;
+}
