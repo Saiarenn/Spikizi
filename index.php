@@ -2,10 +2,10 @@
 header('Content-Type: text/html; charset=utf-8');
 session_start();
 $db = mysqli_connect ("localhost","root","","test");
-$email = $_SESSION['Email'];
-if($_SESSION['Email']== "admin")
+$name = $_SESSION['Name'];
+if($_SESSION['Name']== "admin")
 {Header("Location: Table.php");}
-if ($_SESSION['Email']== TRUE)
+if ($_SESSION['Name']== TRUE)
 {
 
 echo <<< EOT
@@ -18,18 +18,22 @@ echo <<< EOT
 
     <link rel="stylesheet" href="css/base2.css">
     <link rel="stylesheet" href="css/main2.css">
-    <link rel="stylesheet" href="css/base.css">
 
     <!-- favicon
-	================================================== -->
+        ================================================== -->
     <link rel="shortcut icon" href="favicon.jpg">
+    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/69c62f68f1.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
     <!-- header
-   ================================================== -->
+    ================================================== -->
     <header>
 
         <div class="row">
@@ -38,36 +42,51 @@ echo <<< EOT
 
                 <ul id="nav" class="nav">
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#courses">Classes</a></li>
-                    <li><a href="">Plans</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#category">Category</a></li>
                     <li><a href="">About Us</a></li>
-                    <li><a href="log in.html">$name</li>
+                    <li>
+                        <div id="menuToggle">
+                            
+                            <input type="checkbox" />
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                            <ul id="menu">
+                                <a href="#">
+                                    <li><i class="fa-solid fa-user"></i> $name</li>
+                                </a>
+                                <a href="#">
+                                    <li><i class="fa-solid fa-address-card"></i> About</li>
+                                </a>
+                                <a href="#">
+                                    <li><i class="fa-solid fa-gear"></i> Settings</li>
+                                </a>
+                                <a href="log in.html">
+                                    <li><i class="fa-solid fa-right-from-bracket"></i> Log Out</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                <div class="container">
 
-                    <div id="login">
-                        <div><img id="lock" src="Elements/Lock.png"></div>
-                        <div><a href="log in.html">Login</a></div>
-                    </div>
-
-                    <div id="signup"><a href="sign up.html">Sign up for Free</a></div>
-                </div>
 
             </nav>
         </div>
     </header>
 
     <!-- homepage hero
-   ================================================== -->
+    ================================================== -->
     <section id="hero">
 
-        <div class="fullscreen">
+        <div class="heroscreen">
 
-            <form id="searchform"><input type="text" id="search" placeholder="What do want to learn?"><button><img
-                        src="Elements/MagnifyingGlass.png"></button></form>
-        </div>
-
-        <div class="row">
+            <form id="searchform">
+                <input type="text" id="search" placeholder="What do want to learn?">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
 
             <div>
                 <h3>Learn a New Skill<br>
@@ -107,7 +126,7 @@ echo <<< EOT
     </section>
 
     <!-- Statistic
-   ================================================== -->
+    ================================================== -->
     <section id="Statistic">
 
         <div class="row">
@@ -153,7 +172,7 @@ echo <<< EOT
     </section>
 
     <!-- courses
-   ================================================== -->
+    ================================================== -->
     <section id="courses">
 
         <div class="row">
@@ -166,44 +185,77 @@ echo <<< EOT
         <div class="feedgrid">
 
             <button class="leftbutton">
-                <</button>
-
-                    <div id="pack">
+                < </button>
+                    <a id="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/image 8.png"></div>
-                        <p>Various versions have evolve...</p><i class="fa-solid fa-star"></i>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
                         <hr>
                         <h6>500$</h6>
-                    </div>
+                    </a>
 
-                    <div id="pack">
+                    <a id="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/image 9.png"></div>
-                        <p>Various versions have evolve...</p><i class="fa-solid fa-star"></i>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
                         <hr>
                         <h6>500$</h6>
-                    </div>
+                    </a>
 
-                    <div id="pack">
+                    <a id="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/image 7.png"></div>
-                        <p>Various versions have evolve...</p><i class="fa-solid fa-star"></i>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
                         <hr>
                         <h6>500$</h6>
-                    </div>
+                    </a>
 
-                    <div id="pack">
+                    <a id="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/Mask group.png"></div>
-                        <p>Various versions have evolve...</p><i class="fa-solid fa-star"></i>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
                         <hr>
                         <h6>500$</h6>
-                    </div>
+                    </a>
                     <button class="rightbutton">></button>
         </div> <!-- end container -->
-
-
 
     </section>
 
     <!-- category
-   ================================================== -->
+    ================================================== -->
     <section id="category">
 
         <div class="row">
@@ -216,85 +268,157 @@ echo <<< EOT
 
                 <div class="container">
 
-                    <div id="services">
-                        <div><img src="Elements/PenNib.png"><a href="">Design</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/PenNib.png">
+                            <div class="column">
+                                <p>Design</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
-                    <div id="services">
-                        <div><img src="Elements/FileHtml.png"><a href="">Development</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/FileHtml.png">
+                            <div class="column">
+                                <p>Development</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle" href=""><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
-                    <div id="services" href="">
-                        <div><img src="Elements/MicrophoneStage.png"><a href="">Marketing</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
-    
-                    <div id="services" href="">
-                        <div><img src="Elements/Briefcase.png"><a href="">Business</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/MicrophoneStage.png">
+                            <div class="column">
+                                <p>Marketing</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
-                </div> <!-- end container -->
-
-                <div class="container">
-
-                    <div id="services" href="">
-                        <div><img src="Elements/SunHorizon.png"><a href="">Lifestyle</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
-
-                    <div id="services" href="">
-                        <div><img src="Elements/Camera.png"><a href="">Photography</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
-
-                    <div id="services" href="">
-                        <div><img src="Elements/MusicNote.png"><a href="">Music</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
-    
-                    <div id="services" href="">
-                        <div><img src="Elements/Database.png"><a href="">Data Science</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Briefcase.png">
+                            <div class="column">
+                                <p>Business</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
                 </div> <!-- end container -->
 
                 <div class="container">
 
-                    <div id="services" href="">
-                        <div><img src="Elements/Lightbulb.png"><a href="">Personal Develop</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/SunHorizon.png">
+                            <div class="column">
+                                <p>Lifestyle</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
-                    <div id="services" href="">
-                        <div><img src="Elements/Heartbeat.png"><a href="">Health & Fitness</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Camera.png">
+                            <div class="column">
+                                <p>Photography</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
-                    <div id="services" href="">
-                        <div><img src="Elements/Graph.png"><a href="">Finance</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
-    
-                    <div id="services" href="">
-                        <div><img src="Elements/Detective.png"><a href="">Teaching</a></div>
-                        <a id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
-                        <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png"></a>
-                    </div>
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/MusicNote.png">
+                            <div class="column">
+                                <p>Music</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
+
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Database.png">
+                            <div class="column">
+                                <p>Data Science</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
+
+                </div> <!-- end container -->
+
+                <div class="container">
+
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Lightbulb.png">
+                            <div class="column">
+                                <p>Personal Develop</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
+
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Heartbeat.png">
+                            <div class="column">
+                                <p>Health & Fitness</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
+
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Graph.png">
+                            <div class="column">
+                                <p>Finance</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
+
+                    <a id="services" href="">
+                        <div class="container"><img src="Elements/Detective.png">
+                            <div class="column">
+                                <p>Teaching</p>
+                                <p class="courseNum">Courses 145</p>
+                            </div>
+                        </div>
+                        <div id="circle"><img class="Arr" src="Elements/ArrowUpRight.png">
+                            <img class="ArrOr" src="Elements/ArrowUpRightOrrange.png">
+                        </div>
+                    </a>
 
                 </div> <!-- end container -->
 
@@ -305,7 +429,7 @@ echo <<< EOT
     </section>
 
     <!-- staff
-   ================================================== -->
+    ================================================== -->
     <section id="staff">
 
         <div class="row">
@@ -320,25 +444,25 @@ echo <<< EOT
                 < </button>
                     <div id="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 16.png"></div>
-                        <h7>Jacob Jones</h7>
+                        <h3>Kakashi Hatake</h3>
                         <p>UI UX Design Expert</p>
                     </div>
 
                     <div id="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 17.png"></div>
-                        <h7>Jacob Jones</h7>
+                        <h3>Onizuka Eikichi</h3>
                         <p>Social Media Expert</p>
                     </div>
 
                     <div id="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 18.png"></div>
-                        <h7>Jacob Jones</h7>
+                        <h3>Jeon Jungkook</h3>
                         <p>Business Idea Expert</p>
                     </div>
 
                     <div id="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 19.png"></div>
-                        <h7>Jacob Jones</h7>
+                        <h3>Kim Taehyung</h3>
                         <p>Photograpy Expert</p>
                     </div>
                     <button class="rightbutton">></button>
@@ -349,7 +473,7 @@ echo <<< EOT
     </section>
 
     <!-- feedback
-   ================================================== -->
+    ================================================== -->
     <section id="feedback">
 
         <div class="row">
@@ -359,63 +483,57 @@ echo <<< EOT
                 <p>Various versions have evolved over the years, sometimes by accident,</p>
             </div>
         </div> <!-- end row -->
+
         <div class="feedgrid">
             <button class="leftbutton">
-                <</button>
+                < </button>
                     <div id="feeds">
                         <div class="container">
 
-                            <div><img src="Elements/Rectangle 23.png"></div>
+                            <div><img class="ava" src="Elements/Rectangle 23.png"></div>
                             <div id="feedtext">
-                                <h4>Guy Hawkins</h4>
-                                <h7>UI UX Designer</h7>
+                                <h4>Elon Musk</h4>
+                                <h5>UI UX Designer</h5>
                             </div>
                             <div><img id="quote" src="Elements/quote.png"></div>
                         </div>
-                        <p>Ut pharetra ipsum nec leo blandit, sit amet<br>
-                            tincidunt eros pharetra. Nam sed imperdiet<br>
-                            turpis. In hac habitasse platea dictumst.<br>
-                            Praesent nulla massa, hendrerit vestibulum<br>
-                            gravida in, feugiat auctor felis.</p>
+                        <p>Hmm... I didn't know that Kazakhs are so gifted.
+                         And from this you can decide that my companies
+                          Tesla and Spaces need Kazakhs like them.</p>
                     </div>
                     <div id="feeds">
                         <div class="container">
-                            <div><img src="Elements/Rectangle 24.png"></div>
+                            <div><img class="ava" src="Elements/Rectangle 24.png"></div>
                             <div id="feedtext">
-                                <h4>Guy Hawkins</h4>
-                                <h7>UI UX Designer</h7>
+                                <h4>tokayev_online</h4>
+                                <h5>UI UX Designer</h5>
                             </div>
                             <div><img id="quote" src="Elements/quote.png"></div>
                         </div>
-                        <p>Ut pharetra ipsum nec leo blandit, sit amet<br>
-                            tincidunt eros pharetra. Nam sed imperdiet<br>
-                            turpis. In hac habitasse platea dictumst.<br>
-                            Praesent nulla massa, hendrerit vestibulum<br>
-                            gravida in, feugiat auctor felis.</p>
+                        <p>I am glad when the new generation of Kazakhstan
+                         makes such cool products for our country. Do it ! 
+                         We will always support you from the state side.</p>
                     </div>
                     <div id="feeds">
                         <div class="container">
-                            <div><img src="Elements/Rectangle 25.png"></div>
+                            <div><img class="ava" src="Elements/Rectangle 25.png"></div>
                             <div id="feedtext">
-                                <h4>Guy Hawkins</h4>
-                                <h7>UI UX Designer</h7>
+                                <h4 id="oljas">OlzhasKazhybayev</h4>
+                                <h5>UI UX Designer</h5>
                             </div>
                             <div><img id="quote" src="Elements/quote.png"></div>
                         </div>
-                        <p>Ut pharetra ipsum nec leo blandit, sit amet<br>
-                            tincidunt eros pharetra. Nam sed imperdiet<br>
-                            turpis. In hac habitasse platea dictumst.<br>
-                            Praesent nulla massa, hendrerit vestibulum<br>
-                            gravida in, feugiat auctor felis.</p>
+                        <p>
+                        This project is very cool and I would be happy to put 101 out of 100. 
+                        I believe in guys, I want them to achieve their goals.
+                        </p>
                     </div>
                     <button class="rightbutton">></button>
         </div>
 
-
-
     </section>
     <!-- call
-   ================================================== -->
+    ================================================== -->
 
     <section id="call">
 
@@ -424,7 +542,7 @@ echo <<< EOT
             <div class="container">
 
                 <div class="column">
-                    <img src="Elements/Saly-1.png">
+                    <img id="rocket" src="Elements/Saly-1.png">
                     <img id="backell" src="Elements/Ellipse 18.png">
                 </div><!-- end column -->
 
@@ -442,7 +560,7 @@ echo <<< EOT
                             turpis. In hac habitasse platea dictumst.<br>
                             Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.</p>
                     </div>
-                    <div id="signup"><a href="sign up.html">Sign up for Free</a></div>
+                    <a id="signup" href="sign up.html">Sign up for Free</a>
 
                 </div><!-- end column -->
 
@@ -453,7 +571,7 @@ echo <<< EOT
     </section>
 
     <!-- footer
-   ================================================== -->
+    ================================================== -->
     <footer>
 
         <div class="row">
@@ -480,8 +598,10 @@ echo <<< EOT
                                 Email: mielesenn@gmail.com</span></p>
                     </div>
                     <div class="container">
-                        <div id="socials"><img src="Elements/Insta.png"></div>
-                        <div id="socials"><img src="Elements/Facebook.png"></div>
+                        <a href="https://www.instagram.com/nextgn_aio/" id="socials"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" id="socials"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://t.me/TotaeAboutIT" id="socials"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="" id="socials"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
 
                 </div> <!-- end column -->

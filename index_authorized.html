@@ -15,6 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
 
     <script src="https://kit.fontawesome.com/69c62f68f1.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
 
 </head>
 
@@ -24,46 +25,345 @@
     ================================================== -->
     <header>
 
-        <div class="row">
 
-            <nav id="nav-wrap">
+        <nav>
 
-                <ul id="nav" class="nav">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#courses">Classes</a></li>
-                    <li><a href="">Plans</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li>
-                        <div id="menuToggle">
-                            
-                            <input type="checkbox" />
+            <ul id="nav" class="nav">
+                <li><a class="navlink" href="#hero">Home</a></li>
+                <li><a class="navlink" href="#courses">Courses</a></li>
+                <li><a class="navlink" href="#category">Category</a></li>
+                <li><a class="navlink" href="">About Us</a></li>
 
-                            <span></span>
-                            <span></span>
-                            <span></span>
+            </ul>
+            <div id="menuToggle">
 
-                            <ul id="menu">
-                                <a href="#">
-                                    <li><i class="fa-solid fa-user"></i> Profile</li>
-                                </a>
-                                <a href="#">
-                                    <li><i class="fa-solid fa-address-card"></i> About</li>
-                                </a>
-                                <a href="#">
-                                    <li><i class="fa-solid fa-gear"></i> Settings</li>
-                                </a>
-                                <a href="#">
-                                    <li><i class="fa-solid fa-right-from-bracket"></i> Log Out</li>
-                                </a>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                <button class="menu-toggle" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
+                <div class="menu" data-state="closed">
+                    <a class="hamburgerlink" href="#">
+                        <i class="fa-solid fa-user"></i> Profile</a>
+                    <a class="hamburgerlink" href="#">
+                        <i class="fa-solid fa-address-card"></i> About</a>
+                    <a class="hamburgerlink" href="#">
+                        <i class="fa-solid fa-gear"></i> Settings</a>
+                    <a class="hamburgerlink" href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                </div>
+            </div>
 
-            </nav>
-        </div>
+        </nav>
     </header>
+
+    <!-- <div class="lights">
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="lights num2">
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div> -->
+
 
     <!-- homepage hero
     ================================================== -->
@@ -172,9 +472,10 @@
         </div> <!-- end row -->
         <div class="feedgrid">
 
-            <button class="leftbutton">
-                < </button>
-                    <a id="pack" href="coursepage1.html">
+            <button class="leftbutton"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider">
+                <div class="slider-line">
+                    <a class="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/image 8.png"></div>
                         <p>Various versions have evolve...</p>
                         <div class="container">
@@ -190,7 +491,7 @@
                         <h6>500$</h6>
                     </a>
 
-                    <a id="pack" href="coursepage1.html">
+                    <a class="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/image 9.png"></div>
                         <p>Various versions have evolve...</p>
                         <div class="container">
@@ -206,7 +507,7 @@
                         <h6>500$</h6>
                     </a>
 
-                    <a id="pack" href="coursepage1.html">
+                    <a class="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/image 7.png"></div>
                         <p>Various versions have evolve...</p>
                         <div class="container">
@@ -222,7 +523,7 @@
                         <h6>500$</h6>
                     </a>
 
-                    <a id="pack" href="coursepage1.html">
+                    <a class="pack" href="coursepage1.html">
                         <div id="courseimage"><img src="Elements/Mask group.png"></div>
                         <p>Various versions have evolve...</p>
                         <div class="container">
@@ -237,8 +538,81 @@
                         <hr>
                         <h6>500$</h6>
                     </a>
-                    <button class="rightbutton">></button>
+                    <a class="pack" href="coursepage1.html">
+                        <div id="courseimage"><img src="Elements/image 8.png"></div>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
+                        <hr>
+                        <h6>500$</h6>
+                    </a>
+
+                    <a class="pack" href="coursepage1.html">
+                        <div id="courseimage"><img src="Elements/image 9.png"></div>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
+                        <hr>
+                        <h6>500$</h6>
+                    </a>
+
+                    <a class="pack" href="coursepage1.html">
+                        <div id="courseimage"><img src="Elements/image 7.png"></div>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
+                        <hr>
+                        <h6>500$</h6>
+                    </a>
+
+                    <a class="pack" href="coursepage1.html">
+                        <div id="courseimage"><img src="Elements/Mask group.png"></div>
+                        <p>Various versions have evolve...</p>
+                        <div class="container">
+                            <p><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                (102)
+                            </p>
+                        </div>
+                        <hr>
+                        <h6>500$</h6>
+                    </a>
+                </div>
+
+            </div>
+
+            <button class="rightbutton"><i class="fa-solid fa-chevron-right"></i></button>
         </div> <!-- end container -->
+        <div class="pagination">
+            <button class="page active"></button>
+            <button class="page"></button>
+            <button class="page"></button>
+            <button class="page"></button>
+        </div>
 
     </section>
 
@@ -256,7 +630,7 @@
 
                 <div class="container">
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/PenNib.png">
                             <div class="column">
                                 <p>Design</p>
@@ -268,7 +642,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/FileHtml.png">
                             <div class="column">
                                 <p>Development</p>
@@ -280,7 +654,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/MicrophoneStage.png">
                             <div class="column">
                                 <p>Marketing</p>
@@ -292,7 +666,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Briefcase.png">
                             <div class="column">
                                 <p>Business</p>
@@ -308,7 +682,7 @@
 
                 <div class="container">
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/SunHorizon.png">
                             <div class="column">
                                 <p>Lifestyle</p>
@@ -320,7 +694,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Camera.png">
                             <div class="column">
                                 <p>Photography</p>
@@ -332,7 +706,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/MusicNote.png">
                             <div class="column">
                                 <p>Music</p>
@@ -344,7 +718,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Database.png">
                             <div class="column">
                                 <p>Data Science</p>
@@ -360,7 +734,7 @@
 
                 <div class="container">
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Lightbulb.png">
                             <div class="column">
                                 <p>Personal Develop</p>
@@ -372,7 +746,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Heartbeat.png">
                             <div class="column">
                                 <p>Health & Fitness</p>
@@ -384,7 +758,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Graph.png">
                             <div class="column">
                                 <p>Finance</p>
@@ -396,7 +770,7 @@
                         </div>
                     </a>
 
-                    <a id="services" href="">
+                    <a class="services" href="">
                         <div class="container"><img src="Elements/Detective.png">
                             <div class="column">
                                 <p>Teaching</p>
@@ -428,35 +802,67 @@
             </div>
         </div> <!-- end row -->
         <div class="feedgrid">
-            <button class="leftbutton">
-                < </button>
-                    <div id="pack">
+            <button class="leftbutton"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider">
+                <div class="slider-line">
+                    <div class="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 16.png"></div>
                         <h3>Kakashi Hatake</h3>
                         <p>UI UX Design Expert</p>
                     </div>
 
-                    <div id="pack">
+                    <div class="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 17.png"></div>
                         <h3>Onizuka Eikichi</h3>
                         <p>Social Media Expert</p>
                     </div>
 
-                    <div id="pack">
+                    <div class="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 18.png"></div>
                         <h3>Jeon Jungkook</h3>
                         <p>Business Idea Expert</p>
                     </div>
 
-                    <div id="pack">
+                    <div class="pack">
                         <div id="courseimage"><img src="Elements/Rectangle 19.png"></div>
                         <h3>Kim Taehyung</h3>
                         <p>Photograpy Expert</p>
                     </div>
-                    <button class="rightbutton">></button>
+
+                    <div class="pack">
+                        <div id="courseimage"><img src="Elements/Rectangle 16.png"></div>
+                        <h3>Kakashi Hatake</h3>
+                        <p>UI UX Design Expert</p>
+                    </div>
+
+                    <div class="pack">
+                        <div id="courseimage"><img src="Elements/Rectangle 17.png"></div>
+                        <h3>Onizuka Eikichi</h3>
+                        <p>Social Media Expert</p>
+                    </div>
+
+                    <div class="pack">
+                        <div id="courseimage"><img src="Elements/Rectangle 18.png"></div>
+                        <h3>Jeon Jungkook</h3>
+                        <p>Business Idea Expert</p>
+                    </div>
+
+                    <div class="pack">
+                        <div id="courseimage"><img src="Elements/Rectangle 19.png"></div>
+                        <h3>Kim Taehyung</h3>
+                        <p>Photograpy Expert</p>
+                    </div>
+                </div>
+            </div>
+            <button class="rightbutton"><i class="fa-solid fa-chevron-right"></i></button>
         </div> <!-- end container -->
 
-
+        <div class="pagination">
+            <button class="page active"></button>
+            <button class="page"></button>
+            <button class="page"></button>
+            <button class="page"></button>
+        </div>
 
     </section>
 
@@ -473,13 +879,15 @@
         </div> <!-- end row -->
 
         <div class="feedgrid">
-            <button class="leftbutton">
-                < </button>
-                    <div id="feeds">
+            <button class="leftbutton"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider">
+                <div class="slider-line">
+
+                    <div class="feeds">
                         <div class="container">
 
                             <div><img class="ava" src="Elements/Rectangle 23.png"></div>
-                            <div id="feedtext">
+                            <div class="feedtext">
                                 <h4>Elon Musk</h4>
                                 <h5>UI UX Designer</h5>
                             </div>
@@ -491,10 +899,11 @@
                             Praesent nulla massa, hendrerit vestibulum
                             gravida in, feugiat auctor felis.</p>
                     </div>
-                    <div id="feeds">
+
+                    <div class="feeds">
                         <div class="container">
                             <div><img class="ava" src="Elements/Rectangle 24.png"></div>
-                            <div id="feedtext">
+                            <div class="feedtext">
                                 <h4>tokayev_online</h4>
                                 <h5>UI UX Designer</h5>
                             </div>
@@ -506,10 +915,11 @@
                             Praesent nulla massa, hendrerit vestibulum
                             gravida in, feugiat auctor felis.</p>
                     </div>
-                    <div id="feeds">
+
+                    <div class="feeds">
                         <div class="container">
                             <div><img class="ava" src="Elements/Rectangle 25.png"></div>
-                            <div id="feedtext">
+                            <div class="feedtext">
                                 <h4 id="oljas">OlzhasKazhybayev</h4>
                                 <h5>UI UX Designer</h5>
                             </div>
@@ -521,7 +931,76 @@
                             Praesent nulla massa, hendrerit vestibulum
                             gravida in, feugiat auctor felis.</p>
                     </div>
-                    <button class="rightbutton">></button>
+
+                    <div class="feeds">
+                        <div class="container">
+
+                            <div><img class="ava" src="Elements/Rectangle 23.png"></div>
+                            <div class="feedtext">
+                                <h4>Elon Musk</h4>
+                                <h5>UI UX Designer</h5>
+                            </div>
+                            <div><img id="quote" src="Elements/quote.png"></div>
+                        </div>
+                        <p>Ut pharetra ipsum nec leo blandit, sit amet
+                            tincidunt eros pharetra. Nam sed imperdiet
+                            turpis. In hac habitasse platea dictumst.
+                            Praesent nulla massa, hendrerit vestibulum
+                            gravida in, feugiat auctor felis.</p>
+                    </div>
+
+                    <div class="feeds">
+                        <div class="container">
+                            <div><img class="ava" src="Elements/Rectangle 24.png"></div>
+                            <div class="feedtext">
+                                <h4>tokayev_online</h4>
+                                <h5>UI UX Designer</h5>
+                            </div>
+                            <div><img id="quote" src="Elements/quote.png"></div>
+                        </div>
+                        <p>Ut pharetra ipsum nec leo blandit, sit amet
+                            tincidunt eros pharetra. Nam sed imperdiet
+                            turpis. In hac habitasse platea dictumst.
+                            Praesent nulla massa, hendrerit vestibulum
+                            gravida in, feugiat auctor felis.</p>
+                    </div>
+
+                    <div class="feeds">
+                        <div class="container">
+                            <div><img class="ava" src="Elements/Rectangle 25.png"></div>
+                            <div class="feedtext">
+                                <h4 id="oljas">OlzhasKazhybayev</h4>
+                                <h5>UI UX Designer</h5>
+                            </div>
+                            <div><img id="quote" src="Elements/quote.png"></div>
+                        </div>
+                        <p>Ut pharetra ipsum nec leo blandit, sit amet
+                            tincidunt eros pharetra. Nam sed imperdiet
+                            turpis. In hac habitasse platea dictumst.
+                            Praesent nulla massa, hendrerit vestibulum
+                            gravida in, feugiat auctor felis.</p>
+                    </div>
+
+                    <div class="feeds">
+                        <div class="container">
+
+                            <div><img class="ava" src="Elements/Rectangle 23.png"></div>
+                            <div class="feedtext">
+                                <h4>ElonMusk</h4>
+                                <h5>UI UX Designer</h5>
+                            </div>
+                            <div><img id="quote" src="Elements/quote.png"></div>
+                        </div>
+                        <p>Ut pharetra ipsum nec leo blandit, sit amet
+                            tincidunt eros pharetra. Nam sed imperdiet
+                            turpis. In hac habitasse platea dictumst.
+                            Praesent nulla massa, hendrerit vestibulum
+                            gravida in, feugiat auctor felis.</p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="rightbutton"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
 
     </section>
@@ -655,8 +1134,6 @@
                 </div> <!-- end column -->
 
             </div> <!-- end footcon -->
-
-        </div> <!-- end container -->
 
         </div> <!-- end row -->
 

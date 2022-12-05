@@ -15,6 +15,7 @@
 	================================================== -->
     <link rel="shortcut icon" href="favicon.jpg">
     <script src="https://kit.fontawesome.com/69c62f68f1.js" crossorigin="anonymous"></script>
+    <script src="js/expand.js" defer></script>
 
 </head>
 
@@ -102,7 +103,6 @@
 
             <div id="#main">
                 <h3>What will I learn ?</h3>
-                <input type="checkbox" id="check0">
                 <br>
                 <p>The Macine learning basics program is
                     designed to offer a solid foundation & work-
@@ -110,15 +110,16 @@
                     learning basics program is designed to offer a
                     soli foundation & work-ready skills for ML
                     engineers.<br></p>
-                <div class="data data0">
-                    <p>The Macine learning basics program is
-                        designed to offer a solid foundation & work-
-                        ready skills for ML engineers. The Machine
-                        learning basics program is designed to offer a
-                        soli foundation & work-ready skills for ML
-                        engineers.<br></p>
-                </div>
-                <label for="check0">Expand<i class="fa-solid fa-chevron-down"></i></label><br>
+
+                <p class="data data0">The Macine learning basics program is
+                    designed to offer a solid foundation & work-
+                    ready skills for ML engineers. The Machine
+                    learning basics program is designed to offer a
+                    soli foundation & work-ready skills for ML
+                    engineers.<br></p>
+
+                <label class="label" for="" onclick="expand0()">Expand <i
+                        class="fa-solid fa-chevron-down"></i></label><br>
 
             </div>
 
@@ -139,15 +140,15 @@
 
                 <div class="card">
                     <input type="checkbox" id="check1">
-                    <div class="container">
+                    <label for="check1" class="container">
                         <div class="column">
                             <p>Lesson 1</p>
                             <h4>Introduction</h4>
                         </div>
 
-                        <label for="check1" class="bar1"><i class="fa-solid fa-chevron-down"></i></label>
+                        <i class="fa-solid fa-chevron-down ic1"></i>
+                    </label>
 
-                    </div>
 
                     <div class="data data1">
                         <div class="column">
@@ -174,15 +175,14 @@
 
                 <div class="card">
                     <input type="checkbox" id="check2">
-                    <div class="container">
+                    <label for="check2" class="container">
                         <div class="column">
                             <p>Lesson 2</p>
                             <h4>Data Preprocessing</h4>
                         </div>
 
-                        <label for="check2" class="bar2"><i class="fa-solid fa-chevron-down"></i></label>
-
-                    </div>
+                        <i class="fa-solid fa-chevron-down ic2"></i>
+                    </label>
 
                     <div class="data data2">
                         <div class="column">
@@ -209,15 +209,15 @@
 
                 <div class="card">
                     <input type="checkbox" id="check3">
-                    <div class="container">
+                    <label for="check3" class="container">
                         <div class="column">
                             <p>Lesson 3</p>
                             <h4>Text Mining</h4>
                         </div>
 
-                        <label for="check3" class="bar3"><i class="fa-solid fa-chevron-down"></i></label>
+                        <i class="fa-solid fa-chevron-down ic3"></i>
+                    </label>
 
-                    </div>
 
                     <div class="data data3">
                         <div class="column">
@@ -244,15 +244,14 @@
 
                 <div class="card">
                     <input type="checkbox" id="check4">
-                    <div class="container">
+                    <label for="check4" class="container">
                         <div class="column">
                             <p>Lesson 4</p>
                             <h4>Practice Projects</h4>
                         </div>
 
-                        <label for="check4" class="bar4"><i class="fa-solid fa-chevron-down"></i></label>
-
-                    </div>
+                        <i class="fa-solid fa-chevron-down ic4"></i>
+                    </label>
 
                     <div class="data data4">
                         <div class="column">
@@ -475,7 +474,8 @@
                             out the
                             website link to find out more information about training offerings.</p>
                     </div>
-                    <label for="check5">Expand<i class="fa-solid fa-chevron-down"></i></label>
+                    <label class="label" for="" onclick="expand5()">Expand <i
+                            class="fa-solid fa-chevron-down"></i></label><br>
                 </div> <!-- end column -->
             </div>
 
@@ -499,23 +499,27 @@
 
                 <div class="column">
                     <input type="checkbox" id="check6">
-                    <p>Jeon Jungkook is an experienced software engineer and software architect.
-                        In his professional career, he has developed numerous flagship products and has worked on
-                        cutting-edge solutions and technologies for companies like Google, Intel, and many others.
-                        He is primarily interested in real-time and high-scale software and demonstrated his technical
-                        leadership skills working at many leading companies in their fields.</p>
-
-                    <div class="data data6">
-                        <p>He is also programming language and technology agnostic and his teaching methods emphasize
-                            understanding the core fundamentals and developing the right way of thinking and good
-                            practices.
-                            His passion for technology made him a good mentor for other engineers and students, and he
-                            is
-                            excited to share his knowledge and experience here at Spikizy.</p>
+                    <div class="expand6">
+                        <p>Jeon Jungkook is an experienced software engineer and software architect.
+                            In his professional career, he has developed numerous flagship products and has worked on
+                            cutting-edge solutions and technologies for companies like Google, Intel, and many others.
+                            He is primarily interested in real-time and high-scale software and demonstrated his
+                            technical leadership skills working at many leading companies in their fields.</p>
+                        <div class="data data6">
+                            <p>He is also programming language and technology agnostic and his teaching methods
+                                emphasize
+                                understanding the core fundamentals and developing the right way of thinking and good
+                                practices.
+                                His passion for technology made him a good mentor for other engineers and students, and
+                                he
+                                is excited to share his knowledge and experience here at Spikizy.</p>
+                        </div>
                     </div>
-                    <label for="check6">Expand<i class="fa-solid fa-chevron-down"></i></label>
-                </div><!-- end column -->
-            </div>
+                </div>
+                <label class="label" for="" onclick="expand6()">Expand <i
+                        class="fa-solid fa-chevron-down"></i></label><br>
+            </div><!-- end column -->
+        </div>
 
         </div> <!-- end row -->
 
@@ -549,7 +553,8 @@
                                 Email: mielesenn@gmail.com</span></p>
                     </div>
                     <div class="container">
-                        <a href="https://www.instagram.com/nextgn_aio/" id="socials"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/nextgn_aio/" id="socials"><i
+                                class="fa-brands fa-instagram"></i></a>
                         <a href="" id="socials"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://t.me/TotaeAboutIT" id="socials"><i class="fa-brands fa-telegram"></i></a>
                         <a href="" id="socials"><i class="fa-brands fa-whatsapp"></i></a>

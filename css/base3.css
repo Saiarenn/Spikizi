@@ -8,7 +8,7 @@ body {
 
 footer,
 header,
-section{
+section {
 	display: block;
 }
 
@@ -128,10 +128,11 @@ p a,
 p a:visited {
 	line-height: inherit;
 }
+
 /* 
 /* Grid
 ===================================================================== */
-.fullscreen{
+.fullscreen {
 	width: 75%;
 	margin: 0 auto;
 }
@@ -151,14 +152,14 @@ p a:visited {
 	display: flex;
 }
 
-nav{
+nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	padding-right: 5%;
 }
 
-.column{
+.column {
 	display: flex;
 	flex-direction: column;
 }
@@ -181,43 +182,31 @@ nav{
 	display: block;
 }
 
-#check5:checked~.data5 {
-	display: block;
-}
-
-#check6:checked~.data6 {
-	display: block;
-}
-
-#check0:checked~.data0 {
-	display: block;
-}
-
-#check0:checked~ label {
+#check0:checked~label {
 	visibility: hidden;
 }
 
-#check0:checked~ label::after {
+#check0:checked~label::after {
 	content: 'Show Less';
 	display: block;
 	visibility: visible;
 }
 
-#check5:checked~ label {
+#check5:checked~label {
 	visibility: hidden;
 }
 
-#check5:checked~ label::after {
+#check5:checked~label::after {
 	content: 'Show Less';
 	display: block;
 	visibility: visible;
 }
 
-#check6:checked~ label {
+#check6:checked~label {
 	visibility: hidden;
 }
 
-#check6:checked~ label::after {
+#check6:checked~label::after {
 	content: 'Show Less';
 	display: block;
 	visibility: visible;

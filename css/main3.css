@@ -1,6 +1,8 @@
 /* body 
 ---------------------------------------------------------------------- */
-html,
+html {
+	scroll-behavior: smooth;
+}
 body {
 	height: 100%;
 }
@@ -264,6 +266,8 @@ ul {
 
 .card i {
 	font-size: 1.75vw;
+	transform-origin: 0% 0%;
+	transition: transform 0.3s ease;
 }
 
 .card .container {
@@ -273,6 +277,8 @@ ul {
 .card img {
 	width: 1.5625vw;
 	height: 1.5625vw;
+	position: relative;
+	top: 0.75vw;
 }
 
 input[type="checkbox"] {
@@ -282,19 +288,14 @@ input[type="checkbox"] {
 .card label {
 	cursor: pointer;
 	margin: 0.00625vw 1.25vw;
-	size: expanded;
-	width: 50%;
-	display: flex;
-	justify-content: end;
 }
+
+.check1:checked~ .ic1 {
+	transform: rotate(-180deg);
+} 
 
 .data {
 	display: none;
-}
-
-.data img {
-	position: relative;
-	top: 0.75vw;
 }
 
 .data p {

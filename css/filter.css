@@ -1,0 +1,354 @@
+/* body 
+---------------------------------------------------------------------- */
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #ffffff;
+    font: 16px 'Outfit';
+    font-weight: normal;
+    color: #000000;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* typography
+--------------------------------------------------------------------- */
+h3 {
+    color: #FFFFFF;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+h4,
+h5,
+h6 {
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin: 1vw 0 0.83333vw;
+}
+
+h3 {
+    font-size: 3vw;
+    letter-spacing: 0.0555vw;
+}
+
+h4 {
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+a,
+p {
+    font-size: 1vw;
+}
+
+ul {
+    list-style: none;
+}
+
+/* navigation
+--------------------------------------------------------------------- */
+nav {
+    width: 100%;
+}
+
+ul#nav {
+    padding: 1.5vw;
+}
+
+ul#nav li {
+    display: inline-block;
+    margin: 0 2vw;
+}
+
+nav a {
+    color: #666666;
+    font-weight: bold;
+}
+
+.navlink:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    background: #2489D3;
+    height: 0.1vw;
+    width: 100%;
+    transform: scale(0, 1);
+    transition: opacity 0.2s ease, transform 0.3s linear;
+}
+
+nav a:hover {
+    color: #2489D3;
+    transition: color 0.2s ease;
+}
+
+.navlink:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+/* head
+/* =================================================================== */
+
+#head {
+    border-top: 0.1vw solid #000000;
+    background: #E7E9EB;
+}
+
+.topic {
+    color: #3461FD;
+}
+
+#head p {
+    border: 0.1vw solid #000000;
+    color: #3461FDC2;
+    font-size: 2vw;
+    font-weight: 700;
+    margin-right: 2vw;
+}
+
+#head button {
+    background: #E7E9EB;
+    font-size: 2.2vw;
+    font-weight: 300;
+    margin: 1vw 0;
+    margin-left: 2vw;
+    padding: 1vw;
+    border: 0.1vw solid #000000;
+    position: relative;
+    overflow: hidden;
+    transition: 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#head button::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 200%;
+    height: 17vw;
+    background-color: #3461FD;
+    transform: translate(2vw, 1vw);
+    transition: 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+#head button:hover::after{
+    transform: translate(-20vw, -4vw);
+} 
+#head button:hover {
+    color: #E7E9EB;
+}
+#head button span {
+    position: relative;
+    z-index: 1;
+}
+
+#head .filter {
+    padding-right: 4vw;
+}
+
+#head .sort {
+    padding-left: 3vw;
+}
+
+#head button i {
+    margin: 0 1vw;
+}
+
+/* cotalog
+/* =================================================================== */
+#cotalog {
+    padding: 2vw 0;
+}
+
+a#column {
+    color: #000000;
+}
+
+.features {
+    width: 17vw;
+}
+
+.features .container{
+    font-size: 2vw;
+    justify-content: space-between;    
+    padding: 1vw 0;
+    padding-right: 1vw;
+}
+
+#cotalog hr{
+    width: 100%;
+    height: 0.1vw;
+    border: none;
+    background-color: #000000;
+}
+
+#cotalog h4{
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+.courses {
+    margin-left: 2vw;
+    width: 55.5vw;
+    justify-content: space-between;
+    border-bottom: 0.1vw solid gray;
+    padding-bottom: 2vw;
+    margin-bottom: 3vw;
+}
+
+.courses .column {
+    width: 16vw;
+}
+
+.courses img {
+    width: 16vw;
+    height: 9vw;
+}
+
+.courses h5{
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin: 0.25vw 0;
+    color: #000000;
+}
+
+.courses .teacher{
+    color: gray;
+}
+
+.stars {
+    color:#FFBB6A;
+    margin: 0.5vw 0;
+}
+
+.num {
+    color: #986D55;
+    font-weight: 700;
+}
+
+.nn {
+    color: gray;
+}
+
+.discount {
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: #000000;
+    margin-top: 0.5vw;
+}
+
+.first-price {
+    text-decoration: line-through;
+    color: gray;
+    font-weight: 400;
+    margin-left: 1vw;
+}
+
+/* footer
+/* =================================================================== */
+footer {
+    padding-top: 1.5625vw;
+    padding-bottom: 1.5625vw;
+    background-color: #21212F;
+}
+
+footer p {
+    color: #ffffff;
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+footer a {
+    font-size: 1.25vw;
+    color: #CFD3D6;
+    line-height: 2.1875vw;
+}
+
+footer input {
+    font-size: 1vw;
+    border: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer li {
+    line-height: 0;
+}
+
+footer h3 {
+    margin-right: 7vw;
+}
+
+footer p span {
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+#contactform {
+    display: flex;
+    height: 3vw;
+    width: 18vw;
+    border-radius: 0.625vw;
+    margin-top: 1.25vw;
+    padding: 0 9.375%;
+    background: #FFFFFF;
+}
+
+footer .footcon {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer button {
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    border-radius: 1.875vw;
+    background: #FFBB6A;
+    font-size: 1.25vw;
+    color: #FFFFFF;
+    margin-top: 1.25vw;
+    padding: 0.3125vw 1.25vw;
+}
+
+footer button:hover {
+    background: #fa9c32;
+    color: #000000;
+}
+
+#socials {
+    width: 14%;
+    height: 66%;
+    margin: 0.625vw 0.3125vw;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.fa-brands {
+    color: #3461FD;
+    font-size: 1.7vw;
+    margin: 0.4375vw 0 0 0.6vw;
+}
+
+.fa-instagram {
+    margin: 0.4375vw 0 0 0.575vw;
+}
+
+.fa-facebook-f {
+    margin: 0.4375vw 0 0 0.77vw;
+}
+
+.fa-telegram {
+    margin: 0.4375vw 0 0 0.5vw;
+}
