@@ -33,10 +33,10 @@ function closeMenu() {
 //     if (offset > 76.8) offset = 0;
 //     sliderLine.style.left = -offset + 'vw';
 // })
-if (i != 2) offset += 19.2;
-        else offset += 25.5;
-        if (offset > 76.8) offset = 0;
-        packs[i].style.left = -offset + 'vw';
+// if (i != 2) offset += 19.2;
+//         else offset += 25.5;
+//         if (offset > 76.8) offset = 0;
+//         packs[i].style.left = -offset + 'vw';
 // document.querySelector('.leftbutton').addEventListener('click', () => {
 //     offset -= 19.2;
 //     if (offset < 0) offset = 76.8;
@@ -71,7 +71,7 @@ packs.forEach((item, i) => {
         else offset -= 25.5;
         if (offset < 0) offset = 76.8;
         packs[i].style.left = -offset + 'vw';
-    
+
     });
 });
 
