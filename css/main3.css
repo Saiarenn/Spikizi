@@ -3,6 +3,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
 body {
 	height: 100%;
 }
@@ -184,18 +185,6 @@ ul {
 	width: 55%;
 }
 
-#main .data p {
-	position: relative;
-	right: 0;
-}
-
-#main label {
-	color: #6176F7;
-	font-size: 2vw;
-	text-shadow: 0.0625vw 0.0625vw #000000;
-	margin: 0 0 0 1%;
-}
-
 #ad {
 	border: 0.0625vw solid #c9c9c9;
 	width: 15.625vw;
@@ -266,12 +255,8 @@ ul {
 
 .card i {
 	font-size: 1.75vw;
-	transform-origin: 0% 0%;
+	margin: 0 1vw 0 0;
 	transition: transform 0.3s ease;
-}
-
-.card .container {
-	justify-content: space-between;
 }
 
 .card img {
@@ -281,26 +266,32 @@ ul {
 	top: 0.75vw;
 }
 
-input[type="checkbox"] {
-	display: none;
+.collapsible {
+	color: #6176F7;
+	border: none;
+	background-color: transparent;
+	font-size: 2vw;
+	text-shadow: 0.0625vw 0.0625vw #000000;
+	margin: 0 0 0 1%;
 }
 
-.card label {
-	cursor: pointer;
-	margin: 0.00625vw 1.25vw;
+.collapsible i {
+	transition: all 0.2s ease;
 }
 
-.check1:checked~ .ic1 {
-	transform: rotate(-180deg);
-} 
+.collapsible2 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background: transparent;
+	border: none;
+	text-align: left;
+}
 
 .data {
-	display: none;
-}
-
-.data p {
-	position: relative;
-	right: 0.9375vw;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
 
 .column .container {
@@ -440,12 +431,7 @@ hr {
 	padding: 0% 0 3% 0;
 }
 
-#teachers .data p {
-	position: relative;
-	right: 0;
-}
-
-#teachers label {
+#teachers .collapsible {
 	color: #6176F7;
 	font-size: 1.5vw;
 	text-shadow: 0.0625vw 0.0625vw #000000;

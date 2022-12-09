@@ -1,33 +1,39 @@
-var datas = document.getElementsByClassName('data');
-var coll = document.getElementsByTagName('label');
+var coll = document.getElementsByClassName("collapsible");
 
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
 
-function expand0() {
-    if (datas[0].style.display === 'none') {
-        labels[0].innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
-        datas[0].style.display = 'block';
-    } else {
-        labels[0].innerHTML = 'Expand <i class="fa-solid fa-chevron-down"></i>';
-        datas[0].style.display = 'none';
-    }
+        var content = this.previousElementSibling;
+        var icon = this.getElementsByTagName('i')[0];
+        var text = this.getElementsByTagName('span')[0];
+
+        if (content.style.maxHeight) {
+            icon.style.transform = "rotate(0deg)";
+            content.style.maxHeight = null;
+            text.innerHTML = "Expand";
+
+        } else {
+            icon.style.transform = "rotate(-180deg)";
+            content.style.maxHeight = content.scrollHeight + "vw";
+            text.innerHTML = "Show Less";
+        }
+    });
 }
 
-function expand5() {
-    if (datas[5].style.display === 'none') {
-        labels[5].innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
-        datas[5].style.display = 'block';
-    } else {
-        labels[5].innerHTML = 'Expand <i class="fa-solid fa-chevron-down"></i>';
-        datas[5].style.display = 'none';
-    }
-}
+var coll2 = document.getElementsByClassName("collapsible2");
 
-function expand6() {
-    if (datas[6].style.display === 'none') {
-        labels[6].innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
-        datas[6].style.display = 'block';
-    } else {
-        labels[6].innerHTML = 'Expand <i class="fa-solid fa-chevron-down"></i>';
-        datas[6].style.display = 'none';
-    }
+for (i = 0; i < coll2.length; i++) {
+    coll2[i].addEventListener("click", function () {
+
+        var content = this.nextElementSibling;
+        var icon = this.getElementsByTagName('i')[0];
+
+        if (content.style.maxHeight) {
+            icon.style.transform = "rotate(0deg)";
+            content.style.maxHeight = null;
+        } else {
+            icon.style.transform = "rotate(-180deg)";
+            content.style.maxHeight = content.scrollHeight + "vw";
+        }
+    });
 }

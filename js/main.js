@@ -1,53 +1,6 @@
-// hamburger
-const menuToggle = document.querySelector('.menu-toggle');
-const siteMenu = document.querySelector('.menu');
-
-// menuToggle.addEventListener('click', () => {
-//     const isOpened = menuToggle.getAttribute('aria-expanded') === "true";
-//     if (isOpened ? closeMenu() : openMenu());
-// });
-
-// function openMenu() {
-//     menuToggle.setAttribute('aria-expanded', "true");
-//     siteMenu.setAttribute('data-state', "opened");
-// }
-
-// function closeMenu() {
-//     menuToggle.setAttribute('aria-expanded', "false");
-//     siteMenu.setAttribute('data-state', "closing");
-
-//     siteMenu.addEventListener('animationend', () => {
-//         siteMenu.setAttribute('data-state', "closed");
-//     }, { once: true })
-// }
-
-
-//slider
-// let offset = 0;
-// const sliderLine = document.querySelector('.slider-line');
-
-
-
-// document.querySelector('.rightbutton').addEventListener('click', () => {
-//     offset += 19.2;
-//     if (offset > 76.8) offset = 0;
-//     sliderLine.style.left = -offset + 'vw';
-// })
-// if (i != 2) offset += 19.2;
-//         else offset += 25.5;
-//         if (offset > 76.8) offset = 0;
-//         packs[i].style.left = -offset + 'vw';
-// document.querySelector('.leftbutton').addEventListener('click', () => {
-//     offset -= 19.2;
-//     if (offset < 0) offset = 76.8;
-//     sliderLine.style.left = -offset + 'vw';
-// })
-
 const packs = [...document.querySelectorAll('.slider-line')];
 const nextbtn = [...document.querySelectorAll('.rightbutton')];
 const prevbtn = [...document.querySelectorAll('.leftbutton')];
-
-
 
 packs.forEach((item, i) => {
     let offset = 0;
@@ -69,7 +22,7 @@ packs.forEach((item, i) => {
     prevbtn[i].addEventListener('click', () => {
         if (i != 2) offset -= 19.2;
         else offset -= 25.5;
-        if (offset < 0) offset = 76.8;
+        if (offset < -1) offset = 76.8;
         packs[i].style.left = -offset + 'vw';
 
     });
@@ -86,4 +39,27 @@ for (var i = 0; i < pagination.length; i++) {
             this.className += " active";
         });
     }
+}
+
+// hamburger
+const menuToggle = document.querySelector('.menu-toggle');
+const siteMenu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+    const isOpened = menuToggle.getAttribute('aria-expanded') === "true";
+    if (isOpened ? closeMenu() : openMenu());
+});
+
+function openMenu() {
+    menuToggle.setAttribute('aria-expanded', "true");
+    siteMenu.setAttribute('data-state', "opened");
+}
+
+function closeMenu() {
+    menuToggle.setAttribute('aria-expanded', "false");
+    siteMenu.setAttribute('data-state', "closing");
+
+    siteMenu.addEventListener('animationend', () => {
+        siteMenu.setAttribute('data-state', "closed");
+    }, { once: true })
 }
