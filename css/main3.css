@@ -61,6 +61,10 @@ p {
 	font-size: 1.125vw;
 }
 
+a {
+	text-decoration: none;
+}
+
 ul {
 	list-style: none;
 }
@@ -106,6 +110,7 @@ ul {
 
 #coursepanel {
 	width: 26.67%;
+	display: flex;
 	position: fixed;
 	z-index: 1;
 	left: 65%;
@@ -276,7 +281,7 @@ ul {
 }
 
 .collapsible i {
-	transition: all 0.2s ease;
+	transition: transform 0.3s ease;
 }
 
 .collapsible2 {

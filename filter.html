@@ -7,17 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter</title>
 
-
-    <link rel="stylesheet" href="css/base2.css">
     <link rel="stylesheet" href="css/filter.css">
     <!-- favicon
         ================================================== -->
     <link rel="shortcut icon" href="favicon.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
 
     <script src="https://kit.fontawesome.com/69c62f68f1.js" crossorigin="anonymous"></script>
+    <script src="js/filter.js" defer></script>
 </head>
 
 <body>
@@ -54,7 +50,7 @@
             <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
             </p>
 
-            <button class="filter"><span><i class="fa-solid fa-filter"></i> Filter</span></button>
+            <button class="filter" aria-expanded="true"><span><i class="fa-solid fa-filter"></i> Filter</span></button>
             <button class="sort"><span>Sort by <i class="fa-solid fa-chevron-down"></i></span></button>
 
         </div> <!-- end row -->
@@ -67,303 +63,311 @@
 
         <div class="row">
 
-            <div class="container">
+            <div class="wrapper">
 
-                <div class="column features">
+                <div class="features">
 
-                    <hr>
-                    <input type="checkbox" id="check1">
-                    <label for="check1" class="container">
-                        <div>Rating</div>
-                        <div><i class="fa-solid fa-chevron-down"></i></div>
-                    </label>
-                    <hr>
-                    <div class="container">
-                        <div>Video duration</div>
-                        <div><i class="fa-solid fa-chevron-down"></i></div>
+
+                    <button class="collapsible">
+                        <div class="collapsible-title">Price</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="data">
+
+                        <div class="range">
+                            <input contenteditable="true" type="number" class="range__text-min" value="0">
+                            <input contenteditable="true" type="number" class="range__text-max" value="10000">
+                        </div>
+
+                        <div class="range__input">
+
+                            <div class="range__slider">
+                                <div class="range__progress"></div>
+                            </div>
+
+                            <input type="range" class="range__min" name="" id="" tabindex="0" value="0" max="10000"
+                                min="0" step="5">
+                            <input type="range" class="range__max" name="" id="" tabindex="0" value="10000" max="10000"
+                                min="0" step="5">
+                        </div>
                     </div>
-                    <hr>
-                    <div class="container">
-                        <div>Theme</div>
-                        <div><i class="fa-solid fa-chevron-down"></i></div>
+
+
+                    <button class="collapsible">
+                        <div class="collapsible-title">Rating</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="data">
+
                     </div>
-                    <hr>
-                    <div class="container">
-                        <div>Level</div>
-                        <div><i class="fa-solid fa-chevron-down"></i></div>
-                    </div>
-                    <hr>
-                    <div class="container">
-                        <div>Language</div>
-                        <div><i class="fa-solid fa-chevron-down"></i></div>
-                    </div>
-                    <hr>
-                    <div class="container">
-                        <div>Features</div>
-                        <div><i class="fa-solid fa-chevron-down"></i></div>
-                    </div>
+
+                    <button class="collapsible">
+                        <div class="collapsible-title">Video duration</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <button class="collapsible">
+                        <div class="collapsible-title">Theme</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <button class="collapsible">
+                        <div class="collapsible-title">Level</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <button class="collapsible">
+                        <div class="collapsible-title">Language</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <button class="collapsible">
+                        <div class="collapsible-title">Features</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
 
                 </div>
 
-                <div class="column">
-                    <div class="container courses">
+                <div class="courses">
 
-                        <a href="" class="column">
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="courses__item">
+                        <div class="courses__image">
                             <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
+                        </div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                        <a href="" class="column">
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="courses__item">
+                        <div class="courses__image">
                             <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
+                        </div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                        <a href="" class="column">
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="courses__item">
+                        <div class="courses__image">
                             <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
+                        </div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                    </div> <!-- end container courses -->
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                    <div class="container courses">
-
-                        <a href="" class="column">
+                    <a href="" class="courses__item">
+                        <div class="courses__image">
                             <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
+                        </div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                        <a href="" class="column">
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="courses__item">
+                        <div class="courses__image">
                             <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
+                        </div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                        <a href="" class="column">
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="courses__item">
+                        <div class="courses__image">
                             <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
+                        </div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                    </div> <!-- end container courses -->
+                    <a href="" class="courses__item">
+                        <div class="courses__image"><img src="Elements/unsplash_w7ZyuGYNpRQ.png"></div>
+                        <h5 class="courses__title">Python and DJANGO IN 3 MONTHS</h5>
+                        <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
+                        <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
+                                class="nn">(n)</span></p>
+                        <div class="price">
+                            <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
+                        </div>
+                    </a>
 
-                    <div class="container courses">
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                    </div> <!-- end container courses -->
-
-                    <div class="container courses">
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                    </div> <!-- end container courses -->
-
-                    <div class="container courses">
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                    </div> <!-- end container courses -->
-
-                    <div class="container courses">
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                        <a href="" class="column">
-                            <img src="Elements/unsplash_w7ZyuGYNpRQ.png">
-                            <h5>Python and DJANGO IN 3 MONTHS</h5>
-                            <P class="teacher">Totaedandan, Satyldy Aliaskar</P>
-                            <p class="stars"><span class="num">4,6</span> <i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> <span
-                                    class="nn">(n)</span></p>
-                            <div class="price">
-                                <p class="discount">16,99$ <span class="first-price">39,99$</span></p>
-                            </div>
-                        </a>
-
-                    </div> <!-- end container courses -->
-                </div>
+                </div> <!-- end container courses -->
 
             </div> <!-- end container -->
 
@@ -375,7 +379,7 @@
     ================================================== -->
     <footer>
 
-        <div class="row">
+        <div class="footrow">
 
             <div class="container">
                 <div>
@@ -456,7 +460,7 @@
                                 printer took a galley make book.</span></p>
                     </div>
                     <form id="contact">
-                        <input type="text" id="contactform" placeholder="Email here">
+                        <input type="text" class="contactform" placeholder="Email here">
                         <button>Subcribe Now</button>
                     </form>
 

@@ -10,11 +10,9 @@
     <!-- favicon
         ================================================== -->
     <link rel="shortcut icon" href="favicon.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
 
     <script src="https://kit.fontawesome.com/69c62f68f1.js" crossorigin="anonymous"></script>
+    <script src="js/pop.js" defer></script>
     <script src="js/main.js" defer></script>
 
 </head>
@@ -28,19 +26,145 @@
 
         <nav id="nav-wrap">
 
-            <ul id="nav" class="nav">
-                <li><a class="navlink" href="#hero">Home</a></li>
-                <li><a class="navlink" href="#courses">Courses</a></li>
-                <li><a class="navlink" href="#category">Category</a></li>
-                <li><a class="navlink" href="">About Us</a></li>
-            </ul>
-            <div class="container">
-                <a id="login" href="log in.html"><i class="fa-solid fa-lock"></i> Login</a>
-                <a id="signup" href="sign up.html">Sign up for Free</a>
+            <div class="logo">
+                <div class="logo__circle">
+                    SZ
+                </div>
+                <span class="logo__text">Spikizy</span>
             </div>
 
+            <ul id="nav" class="nav">
+                <li><a class="navlink" href="#hero" key="home">Home</a></li>
+                <li><a class="navlink" href="#courses" key="courses">Courses</a></li>
+                <li><a class="navlink" href="#category" key="category">Category</a></li>
+                <li><a class="navlink" href="" key="about">About Us</a></li>
+            </ul>
+
+            <div class="container">
+                <button class="login" onclick="logPop()"><i class="fa-solid fa-lock"></i>
+                    Login</button>
+                <button class="signup" onclick="regPop()">Sign up for Free</button>
+            </div>
         </nav>
+
     </header>
+
+    <div class="log" aria-expanded="false">
+        <div class="log__wrapper">
+
+            <button class="cross" onclick="closeLog()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="log__title">
+                Lets <span>Sign</span> you in
+            </div>
+
+            <div class="log__greetings">
+                Welcome Back,</br>
+                You have been missed
+            </div>
+
+            <form action="forgotpassword" class="log__form" method="post">
+                <input type="text" class="log__user" placeholder=" Email, phone & username">
+                <div class="pass-box">
+                    <input type="password" placeholder="Password" name="password" class="Pass" minlength="8"
+                        maxlength="30" required>
+                    <i class="fa-solid fa-eye-slash see"></i>
+                </div>
+                <div class="log__forgot" onclick="forgotPop()">
+                    Forgot Password?
+                </div>
+                <input type="submit" class="log__button" value="Sign in">
+            </form>
+
+            <div class="log__or">
+                <hr>
+                <span>or</span>
+                <hr>
+            </div>
+
+            <div class="log__socials">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-apple"></i>
+            </div>
+
+            <div class="log__register">
+                Don’t have an account?
+                <button onclick="regPop()">Register Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="reg" aria-expanded="false">
+        <div class="reg__wrapper">
+
+            <button class="cross" onclick="closeReg()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="log__title">
+                Lets <span>Register</span> Account
+            </div>
+
+            <div class="reg__greetings">
+                Hello user, you have <br>
+                a greatful journey
+            </div>
+
+            <form action="register" class="log__form" id="Register" method="post">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Surname" name="surname" required>
+                <input type="text" placeholder="Phone" name="phone" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <div class="pass-box">
+                    <input type="password" placeholder="Password" name="password" class="Pass" oninput="isfilled()"
+                        minlength="8" maxlength="30" required>
+                    <i class="fa-solid fa-eye-slash see"></i>
+                </div>
+                <div class="pass-box">
+                    <input type="password" placeholder="Password again" name="repass" class="Pass" oninput="passCheck()"
+                        minlength="8" maxlength="30" required>
+                    <i class="fa-solid fa-eye-slash see"></i>
+                </div>
+                <div id="error" style="color: red;"></div>
+                <input type="submit" class="log__button" value="Sign up" name="submit">
+            </form>
+
+            <div class="log__register">Already have an account? <button onclick="logPop()">Login</button></div>
+
+        </div>
+    </div>
+
+    <div class="forgot" aria-expanded="false">
+        <div class="forgot__wrapper">
+
+            <button class="cross" onclick="closeForgot()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="log__title">
+                <span>Restore</span> your<br> password.
+            </div>
+
+            <div class="log__greetings">
+                Pass the verification
+            </div>
+
+            <form action="/" class="log__form" method="post">
+                <input type="email" class="log__user" placeholder=" Email address">
+                <div class="verify">
+                    <input type="checkbox">
+                    <span>I’m not a robot</span>
+                </div>
+                <input type="submit" class="log__button" value="Submit">
+            </form>
+
+        </div>
+
+    </div>
+
 
     <!-- homepage hero
     ================================================== -->
@@ -725,11 +849,11 @@
 
         <div class="row">
 
-            <div class="container">
-                <div>
-                    <h3>LOGO</h3>
+            <div class="logo">
+                <div class="logo__circle">
+                    SZ
                 </div>
-
+                <span class="logo__text">Spikizy</span>
             </div>
 
             <div class="footcon">
@@ -747,10 +871,10 @@
                                 Email: mielesenn@gmail.com</span></p>
                     </div>
                     <div class="container">
-                        <a href="" id="socials"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="" id="socials"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="" id="socials"><i class="fa-brands fa-telegram"></i></a>
-                        <a href="" id="socials"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="" class="socials"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="socials"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" class="socials"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="" class="socials"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
 
                 </div> <!-- end column -->
@@ -796,14 +920,14 @@
                 <div class="column">
 
                     <div>
-                        <p class id="foothead">Subscribe</p>
+                        <p>Subscribe</p>
                     </div>
 
                     <div>
                         <p><span>Lorem Ipsum has been them an industry<br>
                                 printer took a galley make book.</span></p>
                     </div>
-                    <form id="contact">
+                    <form id="contact" method="post">
                         <input type="text" id="contactform" placeholder="Email here">
                         <button>Subcribe Now</button>
                     </form>

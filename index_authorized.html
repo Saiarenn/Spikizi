@@ -10,9 +10,6 @@
     <!-- favicon
         ================================================== -->
     <link rel="shortcut icon" href="favicon.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
 
     <script src="https://kit.fontawesome.com/69c62f68f1.js" crossorigin="anonymous"></script>
     <script src="js/main.js" defer></script>
@@ -27,6 +24,13 @@
 
 
         <nav>
+
+            <div class="logo">
+                <div class="logo__circle">
+                    SZ
+                </div>
+                <span class="logo__text">Spikizy</span>
+            </div>
 
             <ul id="nav" class="nav">
                 <li><a class="navlink" href="#hero">Home</a></li>
@@ -44,21 +48,24 @@
                 </button>
 
                 <div class="menu" data-state="closed">
-                    <a class="hamburgerlink" href="#">
+                    <a class="hamburgerlink" href="profile.html">
                         <i class="fa-solid fa-user"></i> Profile</a>
                     <a class="hamburgerlink" href="#">
                         <i class="fa-solid fa-address-card"></i> About</a>
                     <a class="hamburgerlink" href="#">
                         <i class="fa-solid fa-gear"></i> Settings</a>
-                    <a class="hamburgerlink" href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                    <form class="logout-form" method="post">
+                        <button class="hamburgerlink">
+                            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+                        </button>
+                    </form>
                 </div>
             </div>
 
         </nav>
     </header>
 
-    <!-- <div class="lights">
+    <!--<div class="lights">
         <div class="lightcircle">
             <span></span>
             <span></span>
@@ -71,6 +78,9 @@
             <span></span>
         </div>
         <div class="lightcircle">
+            <span></span>
+            <span></span>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -211,7 +221,7 @@
         </div>
     </div>
 
-    <div class="lights num2">
+    <div class="lights">
         <div class="lightcircle">
             <span></span>
             <span></span>
@@ -362,7 +372,7 @@
             <span></span>
             <span></span>
         </div>
-    </div> -->
+    </div>-->
 
 
     <!-- homepage hero
